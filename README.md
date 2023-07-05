@@ -1,23 +1,23 @@
-# portfolio
+# 【portfolio】
 
-## calculator-project
+## ◆ calculator-project
 
-### contents
+### ◇ contents
 - A web app based on the iphone-calculator.
 
-### languages
+### ◇ languages
 - HTML, CSS/SCSS, JavaScript
 
-## my-portfolio-site
+## ◆ my-portfolio-site
 
-### contents
+### ◇ contents
 - Self introduction site.
 
-### languages
+### ◇ languages
 - HTML, CSS/SCSS, JavaScript, TypeScript 
 
-### framework
+### ◇ framework
 - React
 
-### library
+### ◇ library
 - GSAP, Three.js
