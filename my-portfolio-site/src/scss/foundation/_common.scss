@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@use "../global/" as vbls;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%; // default font size is 16px
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: vbls.$aColor;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: vbls.$bgColor;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 9rem;
+    margin: auto;
+    color: vbls.$h2Color;
+    text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13)
+}
+
+
+.title {
+    position: relative;
+    width: 100%;
+    height: 170px;
+    margin: 2rem auto;
+    text-align: center;
+    margin-top: 10rem;
+
+    h2 {
+        font-size: 7rem;
+        margin: auto;
+        width: 40%;
+        border-bottom: vbls.$borderColor .1em solid;
+        color: vbls.$h2Color;
+        text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13)
+    }
+}

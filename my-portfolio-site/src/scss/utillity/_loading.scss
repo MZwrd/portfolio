@@ -1,0 +1,29 @@
+@use "../global" as vbls;
+
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: vbls.$loadingMainColor;
+    z-index: 10000;
+
+    .model {
+        position: absolute;
+        bottom: 10rem;
+        right: 10rem;
+        stroke: vbls.$pathAnimateColor;
+        fill-opacity: 0;
+        stroke-width: .2px;
+        stroke-dasharray: 500;
+        animation: pathAnime 3s ease;
+    }
+}
+
+@keyframes pathAnime {
+    0% {
+        stroke-dashoffset: 500;
+    }
+    100% {
+        stroke-dashoffset: 400;
+    }
+}

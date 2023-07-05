@@ -1,0 +1,1022 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+/* 
+    =========================
+           toTopArrow 
+    =========================
+*/
+.toTop {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 3rem;
+}
+.toTop a {
+  color: rgb(171, 221, 171);
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  .toTop {
+    display: none;
+  }
+  /* hamburger menu */
+  .sp-menu {
+    position: fixed;
+    background-color: #10101a;
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+    right: 0;
+    margin: 2rem 4rem;
+    z-index: 120;
+    cursor: pointer;
+  }
+  .sp-menu span {
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    width: 45%;
+    border-radius: 2px;
+    background-color: #03ffc0;
+    transition: all 0.4s ease-in-out;
+  }
+  .sp-menu span:nth-of-type(1) {
+    top: 15px;
+  }
+  .sp-menu span:nth-of-type(2) {
+    top: 23px;
+  }
+  .sp-menu span:nth-of-type(3) {
+    top: 31px;
+  }
+  .sp-menu:hover {
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
+  .sp-menu.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+  .sp-menu.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .sp-menu.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+  .a-header.sp {
+    display: block;
+    left: 0;
+    background-color: hsla(0, 0%, 10%, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4em;
+    border-left-style: none;
+    height: 30vh;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition: all 3s ease-in-out;
+  }
+}
+.loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgb(5, 5, 5), rgb(20, 20, 20), rgb(15, 13, 13));
+  z-index: 10000;
+}
+.loading .model {
+  position: absolute;
+  bottom: 10rem;
+  right: 10rem;
+  stroke: #fff;
+  fill-opacity: 0;
+  stroke-width: 0.2px;
+  stroke-dasharray: 500;
+  animation: pathAnime 3s ease;
+}
+
+@keyframes pathAnime {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 400;
+  }
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #10101a;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 9rem;
+  margin: auto;
+  color: #fff;
+  text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13);
+}
+
+.title {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin: 2rem auto;
+  text-align: center;
+  margin-top: 10rem;
+}
+.title h2 {
+  font-size: 7rem;
+  margin: auto;
+  width: 40%;
+  border-bottom: #92f7ab 0.1em solid;
+  color: #fff;
+  text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13);
+}
+
+.a-header {
+  position: fixed;
+  margin: 0.6rem;
+  padding: 0.5rem;
+  right: 1.5rem;
+  top: 5rem;
+  border-left: #92f7ab 2px solid;
+  z-index: 5300;
+}
+.a-header .nav-container .nav-list .nav a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  margin-bottom: 1.8em;
+  letter-spacing: 0.2rem;
+}
+.a-header .nav-container .nav-list .nav a:hover {
+  transition: 0.8s ease;
+  color: #f5f0a8;
+}
+.a-header .follow .item {
+  background: linear-gradient(to bottom, rgb(34, 30, 32), rgba(146, 247, 171, 0.3882352941));
+  border-radius: 50%;
+  padding: 1.2rem;
+  margin: 1.3rem 0.2rem;
+}
+.a-header .follow .item a {
+  font-size: 1.8rem;
+}
+.a-header .follow .item:hover {
+  transition: 0.4s ease;
+  opacity: 0.3;
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .a-header {
+    right: 0.4rem;
+    padding: 0.2rem;
+    margin: 1.8rem;
+  }
+  .a-header .nav-container .nav-list .nav a {
+    letter-spacing: 0.4rem;
+    font-size: 1.3rem;
+  }
+  .a-header .follow .item {
+    border-radius: 40%;
+    padding: 1.2rem;
+    margin: 1.3rem 0.2rem;
+  }
+  .a-header .follow .item a {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .a-header {
+    margin: 1rem;
+    padding: 0.2rem;
+    opacity: 1;
+  }
+  .a-header .nav-container .nav-list .nav a {
+    font-size: 1.4rem;
+  }
+  .a-header .follow .item {
+    padding: 1rem;
+    margin: 1.5rem 0.7rem;
+  }
+  .a-header .follow .item a {
+    font-size: 1.2rem;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  .a-header {
+    display: none;
+  }
+  .a-header {
+    margin: 2rem;
+  }
+  .a-header .nav-container .nav-list .nav {
+    margin: 2em;
+  }
+  .a-header .nav-container .nav-list .nav a {
+    letter-spacing: 0.4rem;
+    font-size: 1.8rem;
+    writing-mode: horizontal-tb;
+  }
+  .a-header .follow {
+    display: none;
+  }
+}
+#top {
+  position: relative;
+}
+#top .experience {
+  position: absolute;
+  top: 70%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: 500;
+  border-radius: 50%;
+}
+#top .hero {
+  text-align: center;
+  opacity: 0.4;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}
+#top .hero:hover {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+#top .hero-title {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  z-index: 2;
+  padding: 2rem;
+}
+#top .hero-title p {
+  text-align: right;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13);
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1100px) {
+  #top {
+    position: relative;
+  }
+  #top .hero {
+    text-align: center;
+    opacity: 0.4;
+    z-index: 5;
+  }
+  #top .hero:hover {
+    opacity: 1;
+  }
+  #top .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    z-index: 2;
+  }
+  #top .hero-title h1 {
+    font-size: 5rem;
+  }
+  #top .hero-title p {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #top .experience {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    height: 260px;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+  }
+  #top .hero-title h1 {
+    font-size: 3rem;
+  }
+  #top .hero-title p {
+    font-size: 1rem;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  #top {
+    display: none;
+  }
+}
+#profile {
+  padding: 0% 10%;
+  display: flex;
+  flex-direction: column;
+}
+#profile .profile_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#profile .profile_container .logo img {
+  margin-bottom: 7rem;
+  width: 400px;
+  height: 400px;
+  background-color: #fceded;
+  border-radius: 50%;
+  padding: 1.2rem;
+  filter: sepia(100%);
+}
+#profile .profile_container .textBox .about-text h3,
+#profile .profile_container .textBox .carrer-text h3 {
+  font-size: 4.2rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+#profile .profile_container .textBox .about-text .sentence p,
+#profile .profile_container .textBox .carrer-text .sentence p {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+#profile .profile_container .textBox .about-text .sentence .rightArrow,
+#profile .profile_container .textBox .carrer-text .sentence .rightArrow {
+  text-indent: 1.3rem;
+  font-size: 2.2rem;
+  margin-right: 0.7rem;
+}
+#profile .profile_container .textBox .about-text .sentence span,
+#profile .profile_container .textBox .carrer-text .sentence span {
+  color: #fff;
+  line-height: 70px;
+  font-size: 2.8rem;
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1317px) {
+  #profile {
+    height: 100%;
+  }
+  #profile .title {
+    height: 110px;
+  }
+  #profile .title h2 {
+    font-size: 5.5rem;
+  }
+  #profile .profile_container {
+    flex-direction: column;
+  }
+  #profile .profile_container .logo {
+    height: 100%;
+    margin-top: 5rem;
+  }
+  #profile .profile_container .textBox .about-text .sentence span {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #profile {
+    height: 100%;
+  }
+  #profile .title {
+    margin-top: 15rem;
+  }
+  #profile .title h2 {
+    font-size: 4.5rem;
+    width: 50%;
+  }
+  #profile .profile_container {
+    flex-direction: column;
+  }
+  #profile .profile_container .logo img {
+    width: 340px;
+    height: 340px;
+  }
+  #profile .profile_container .textBox .about-text {
+    margin-bottom: 2rem;
+  }
+  #profile .profile_container .textBox .about-text h3 {
+    font-size: 3rem;
+    margin: 1.3rem 0;
+  }
+  #profile .profile_container .textBox .about-text .sentence span {
+    font-size: 1.6rem;
+    line-height: 60px;
+  }
+  #profile .profile_container .textBox .carrer-text {
+    margin-top: 5rem;
+  }
+  #profile .profile_container .textBox .carrer-text h3 {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+  }
+  #profile .profile_container .textBox .carrer-text .sentence {
+    line-height: 3rem;
+  }
+  #profile .profile_container .textBox .carrer-text .sentence p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  #profile .profile_container .textBox .carrer-text .sentence span {
+    font-size: 1.4rem;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  #profile {
+    height: 100%;
+  }
+  #profile .title h2 {
+    font-size: 3.5rem;
+    width: 50%;
+  }
+  #profile .profile_container {
+    flex-direction: column;
+  }
+  #profile .profile_container .logo img {
+    width: 250px;
+    height: 250px;
+  }
+  #profile .profile_container .textBox .about-text {
+    margin-bottom: 2rem;
+  }
+  #profile .profile_container .textBox .about-text h3 {
+    font-size: 2.2rem;
+    margin: 1.3rem 0;
+  }
+  #profile .profile_container .textBox .about-text .sentence .rightArrow {
+    font-size: 1.5rem;
+  }
+  #profile .profile_container .textBox .about-text .sentence span {
+    line-height: 40px;
+    font-size: 1.5rem;
+  }
+}
+#skills {
+  padding: 10% 10%;
+}
+#skills .skill_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+}
+#skills .skill_container h3 {
+  color: #fff;
+  font-size: 3.8rem;
+  margin: 2rem;
+}
+#skills .skill_container .sentence {
+  margin: 2.2rem;
+}
+#skills .skill_container .sentence .icon {
+  font-size: 2.5rem;
+  text-indent: 1.2rem;
+  margin-right: 0.5rem;
+}
+#skills .skill_container .sentence span {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1317px) {
+  #skills {
+    height: 100%;
+    padding: 10% 10%;
+  }
+  #skills .title h2 {
+    font-size: 6.2rem;
+  }
+  #skills .skill_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills .skill_container h3 {
+    font-size: 3.6rem;
+  }
+  #skills .skill_container .sentence span {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #skills {
+    height: 100%;
+    padding: 10% 10%;
+  }
+  #skills .title h2 {
+    font-size: 5rem;
+  }
+  #skills .skill_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills .skill_container h3 {
+    font-size: 3.2rem;
+    margin: 2rem;
+  }
+  #skills .skill_container .sentence {
+    margin: 1.2rem;
+  }
+  #skills .skill_container .sentence p {
+    margin-top: 1.2rem;
+  }
+  #skills .skill_container .sentence i {
+    font-size: 1.8rem;
+    text-indent: 1.2rem;
+    margin-right: 0.4rem;
+  }
+  #skills .skill_container .sentence span {
+    font-size: 1.8rem;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  #skills {
+    height: 100%;
+    padding: 10% 10%;
+  }
+  #skills .title h2 {
+    font-size: 3.5rem;
+  }
+  #skills .skill_container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  #skills .skill_container h3 {
+    font-size: 3.2rem;
+    margin: 2rem;
+  }
+  #skills .skill_container .sentence {
+    margin: 1.2rem;
+  }
+  #skills .skill_container .sentence .icon {
+    font-size: 1.5rem;
+  }
+  #skills .skill_container .sentence span {
+    font-size: 1.5rem;
+  }
+}
+#works {
+  text-align: center;
+}
+#works .designer .title {
+  margin: 10rem 0;
+}
+#works .designer .title h2 {
+  font-size: 6rem;
+  margin: 0 auto;
+  width: 40%;
+  border-bottom: #92f7ab 0.1em solid;
+  color: #fff;
+  text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13);
+}
+#works .designer h3 {
+  color: #fff;
+  font-size: 4rem;
+  margin: 2rem;
+}
+#works .designer .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #272935;
+  margin: 0 14rem;
+  padding: 2rem;
+  border-radius: 1.5%;
+}
+#works .designer .products img {
+  width: 100%;
+  margin: 2.4rem;
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  #works .designer .title {
+    margin: 10rem 0;
+  }
+  #works .designer .title h2 {
+    font-size: 5rem;
+    margin: 0 auto;
+    width: 45%;
+  }
+  #works .designer h3 {
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  #works .designer .products {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  #works .designer .products img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #works {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  #works .designer .title {
+    margin: 10rem 0;
+  }
+  #works .designer .title h2 {
+    font-size: 4rem;
+    margin: 0 auto;
+    width: 65%;
+  }
+  #works .designer h3 {
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  #works .designer .products {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+    align-items: center;
+  }
+  #works .designer .products img {
+    width: 90%;
+    margin: 2rem 0;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  #works {
+    text-align: center;
+  }
+  #works .designer .title {
+    margin: 10rem 0;
+  }
+  #works .designer .title h2 {
+    font-size: 4rem;
+    margin: 0 auto;
+    width: 75%;
+  }
+  #works .designer h3 {
+    font-size: 3rem;
+    margin: 2rem;
+  }
+  #works .designer .products {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  #works .designer .products img {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+#contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+#contact form {
+  background-color: rgba(82, 90, 96, 0.8745098039);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+#contact form h3 {
+  color: #fff;
+  font-weight: 800;
+  overflow: hidden;
+  margin-bottom: 1.2em;
+}
+#contact form input,
+#contact form textarea {
+  border: 0;
+  margin: 1em 0;
+  padding: 2em;
+  outline: none;
+  background-color: #f5f5f5;
+  font-size: 1.6em;
+}
+#contact form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4em;
+  background-color: #26262b;
+  color: #fff;
+  font-size: 2em;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 140px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  border-radius: 2em;
+}
+#contact form button:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 721px) and (max-width: 1317px) {
+  #contact .title h2 {
+    font-size: 6rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  #contact {
+    margin-bottom: 8rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #contact .title h2 {
+    font-size: 4rem;
+    width: 55%;
+  }
+}
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  #contact {
+    margin-bottom: 8rem;
+  }
+  #contact .title h2 {
+    font-size: 3rem;
+    width: 55%;
+  }
+  #contact form input,
+  #contact form textarea {
+    font-size: 1.3rem;
+  }
+  #contact form button {
+    font-size: 1.5rem;
+  }
+}
+/* contents > top, profile, skills, works, contact */
+.a-main {
+  width: 100%;
+  border: solid #fff 0.3rem;
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .a-main {
+    width: 100%;
+  }
+}
+.a-footer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #272935;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  bottom: 0;
+  box-shadow: 0 0 0.8rem rgb(168, 238, 154);
+  width: 100vw;
+  opacity: 0.9;
+}
+.a-footer .quick-list {
+  margin-top: 1.2rem;
+}
+.a-footer .quick-list nav .c-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a-footer .quick-list nav .c-menu li {
+  margin: 0.1rem 2rem;
+}
+.a-footer .quick-list nav .c-menu li a {
+  font-size: 1.4rem;
+  display: inline-block;
+  text-align: center;
+  width: 70px;
+}
+.a-footer .quick-list nav .c-menu li a:hover {
+  transition: 0.4s ease;
+  opacity: 0.5;
+  letter-spacing: 0.1rem;
+}
+.a-footer .quick-list nav .c-menu span::before {
+  content: "|";
+  color: #fff;
+  font-size: 1.2rem;
+}
+.a-footer .outer-footer {
+  text-align: center;
+  padding: 0.4rem;
+}
+.a-footer .outer-footer small {
+  color: #fff;
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+  .a-footer .follow {
+    padding: 0.1rem;
+    margin: 0.2rem;
+  }
+  .a-footer .follow .item {
+    padding: 0.8rem;
+    margin: 0.6rem;
+  }
+  .a-footer .follow .item a {
+    font-size: 0.8rem;
+  }
+  .a-footer .quick-list nav .c-menu li {
+    margin: 0.1rem 1rem;
+  }
+  .a-footer .quick-list nav .c-menu li a {
+    font-size: 1.3rem;
+    width: 6.6rem;
+  }
+  .a-footer .quick-list nav .c-menu span::before {
+    font-size: 0.8rem;
+  }
+  .a-footer .outer-footer {
+    padding: 0.3em;
+  }
+}
+/* utillity > animation, loading  */
+/* foundation > reset, common  */
+/* layout > header, main, footer  *//*# sourceMappingURL=style.css.map */

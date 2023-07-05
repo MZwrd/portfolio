@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  width: 370px;
+  height: 640px;
+  border: solid 0.5rem rgb(163, 161, 161);
+  background-color: #000000;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .result {
+  text-align: right;
+  color: #fff;
+  height: 140px;
+}
+.wrapper .result span {
+  display: inline-block;
+  padding-top: 4rem;
+  font-size: 7rem;
+  margin-right: 2rem;
+}
+.wrapper .buttons {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.wrapper .buttons .item {
+  font-size: 4rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 7rem;
+  height: 7rem;
+  color: #fff;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  justify-self: center;
+}
+.wrapper .buttons .item.type1 {
+  color: rgb(63, 62, 62);
+  background-color: rgb(190, 190, 190);
+}
+.wrapper .buttons .item.type2 {
+  background-color: rgb(58, 56, 56);
+}
+.wrapper .buttons .item.type2.zero {
+  width: 16.5rem;
+  text-align: left;
+  padding-left: 2.5rem;
+  grid-column: span 2;
+  border-radius: 13.5rem;
+}
+.wrapper .buttons .item.type3 {
+  background-color: rgb(209, 137, 79);
+}
+.wrapper .buttons .item.type3:focus {
+  background-color: #fff;
+  color: rgb(209, 137, 79);
+}
+.wrapper .buttons .item:active {
+  animation: animeButton 0.5s ease-in-out;
+}
+
+@keyframes animeButton {
+  50% {
+    background-color: #fff;
+  }
+  75% {
+    background-color: #fff;
+  }
+}/*# sourceMappingURL=style.css.map */

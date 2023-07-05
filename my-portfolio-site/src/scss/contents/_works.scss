@@ -1,0 +1,164 @@
+@use "../global" as vbls;
+
+#works {
+    text-align: center;
+
+    .designer {
+        .title {
+            margin: 10rem 0;
+
+            h2 {
+                font-size: 6rem;
+                margin: 0 auto;
+                width: 40%;
+                border-bottom: vbls.$borderColor .1em solid;
+                color: vbls.$h2Color;
+                text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13)
+            }
+        }
+
+        h3 {
+            color: vbls.$h3Color;
+            font-size: 4rem;
+            margin: 2rem;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: vbls.$productsColor;
+            margin: 0 14rem;
+            padding: 2rem;
+            border-radius: 1.5%;
+
+            img {
+                width: 100%;
+                margin: 2.4rem;
+            }
+        }
+    }
+
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width:721px) and (max-width:1024px) {
+    #works {
+
+        .designer {
+            .title {
+                margin: 10rem 0;
+
+                h2 {
+                    font-size: 5rem;
+                    margin: 0 auto;
+                    width: 45%;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+                margin: 2rem;
+            }
+
+            .products {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                margin: 2rem;
+                padding: 2rem;
+
+                img {
+                    width: 100%;
+                    margin: 2rem 0;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) {
+    #works {
+        text-align: center;
+        padding-bottom: 3rem;
+
+        .designer {
+            .title {
+                margin: 10rem 0;
+
+                h2 {
+                    font-size: 4rem;
+                    margin: 0 auto;
+                    width: 65%;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+                margin: 2rem;
+            }
+
+            .products {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                margin: 2rem;
+                padding: 2rem;
+                align-items: center;
+
+                img {
+                    width: 90%;
+                    margin: 2rem 0;
+                }
+            }
+        }
+
+    }
+
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+    #works {
+        text-align: center;
+
+        .designer {
+            .title {
+                margin: 10rem 0;
+
+                h2 {
+                    font-size: 4rem;
+                    margin: 0 auto;
+                    width: 75%;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+                margin: 2rem;
+            }
+
+            .products {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                margin: 2rem;
+                padding: 2rem;
+
+                img {
+                    width: 100%;
+                    margin: 2rem 0;
+                }
+            }
+        }
+
+    }
+
+}

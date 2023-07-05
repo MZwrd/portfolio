@@ -1,0 +1,136 @@
+@use "../global" as vbls;
+
+#top {
+    position: relative;
+
+    .experience {
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        z-index: 500;
+        border-radius: 50%;
+    }
+
+    .hero {
+        text-align: center;
+        opacity: .4;
+        z-index: 5;
+        transition: all .5s ease-in-out;
+    }
+
+    .hero:hover {
+        transition: all .5s ease-in-out;
+        opacity: 1;
+    }
+
+    .hero-title {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        z-index: 2;
+        padding: 2rem;
+
+
+        p {
+            text-align: right;
+            font-size: 3rem;
+            color: vbls.$pColor;
+            text-shadow: 0.02em 0.02em 0.02em rgb(13, 14, 13);
+        }
+    }
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width:721px) and (max-width:1100px) {
+    #top {
+        position: relative;
+
+        .hero {
+            text-align: center;
+            opacity: .4;
+            z-index: 5;
+        }
+
+        .hero:hover {
+            opacity: 1;
+        }
+
+        .hero-title {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            z-index: 2;
+
+            h1 {
+                font-size: 5rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) {
+
+    #top {
+        .experience {
+            position: absolute;
+            display: flex;
+            width: 250px;
+            height: 260px;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .hero-title {
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+
+@media screen and (max-width: 480px) {
+
+    #top {
+        display: none;
+    }
+
+    // .experience {
+    //     position: relative;
+    //     margin-top: 10rem;
+    //     margin-bottom: 5rem;
+    //     width: 250px;
+    //     left: 50%;
+    //     top: 130px;
+    //     z-index: 15;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+
+}
+

@@ -1,0 +1,157 @@
+@use "../global" as vbls;
+
+.a-header {
+    position: fixed;
+    margin: .6rem;
+    padding: .5rem;
+    right: 1.5rem;
+    top: 5rem;
+    border-left: vbls.$borderColor 2px solid;
+    z-index: 5300;
+
+    .nav-container {
+        .nav-list {
+            .nav {
+                a {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    writing-mode: vertical-rl;
+                    margin-bottom: 1.8em;
+                    letter-spacing: .2rem;
+                }
+
+                a:hover {
+                    transition: .8s ease;
+                    color: vbls.$aHoverColor_01;
+                }
+            }
+        }
+
+    }
+
+    .follow {
+
+        .item {
+            background: vbls.$followBtnColor;
+            border-radius: 50%;
+            padding: 1.2rem;
+            margin: 1.3rem .2rem;
+
+            a {
+                font-size: 1.8rem;
+            }
+        }
+
+        .item:hover {
+            transition: .4s ease;
+            opacity: .3;
+        }
+    }
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width:721px) and (max-width:1024px) {
+
+    .a-header {
+        right: .4rem;
+        padding: .2rem;
+        margin: 1.8rem;
+
+        .nav-container {
+            .nav-list {
+                .nav {
+
+                    a {
+                        letter-spacing: .4rem;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        .follow {
+
+            .item {
+                border-radius: 40%;
+                padding: 1.2rem;
+                margin: 1.3rem .2rem;
+
+                a {
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) {
+
+    .a-header {
+        margin: 1rem;
+        padding: .2rem;
+        opacity: 1;
+
+        .nav-container {
+            .nav-list {
+                .nav {
+                    a {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+
+        .follow {
+            .item {
+                padding: 1rem;
+                margin: 1.5rem .7rem;
+
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+
+@media screen and (max-width: 480px) {
+
+    .a-header {
+        display: none;
+    }
+
+    .a-header {
+        margin: 2rem;
+
+        .nav-container {
+            .nav-list {
+                .nav {
+                    margin: 2em;
+
+                    a {
+                        letter-spacing: .4rem;
+                        font-size: 1.8rem;
+                        writing-mode: horizontal-tb;
+                    }
+
+                }
+            }
+        }
+
+        .follow {
+            display: none;
+        }
+    }
+
+}

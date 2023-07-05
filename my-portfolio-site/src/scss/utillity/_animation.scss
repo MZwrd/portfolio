@@ -1,0 +1,111 @@
+@use "../global" as vbls;
+
+/* 
+    =========================
+           toTopArrow 
+    =========================
+*/
+.toTop {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+
+    a {
+        color: vbls.$toTopArrowColor;
+    }
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+
+    .toTop {
+        display: none;
+    }
+
+    /* hamburger menu */
+    .sp-menu {
+        position: fixed;
+        background-color: vbls.$spMenuColor;
+        width: 50px;
+        height: 50px;
+        border-radius: .5rem;
+        right: 0;
+        margin: 2rem 4rem;
+        z-index: 120;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            width: 45%;
+            border-radius: 2px;
+            background-color: #03ffc0;
+            transition: all .4s ease-in-out;
+        }
+
+        span:nth-of-type(1) {
+            top: 15px;
+        }
+
+        span:nth-of-type(2) {
+            top: 23px;
+        }
+
+        span:nth-of-type(3) {
+            top: 31px;
+        }
+
+    }
+
+    .sp-menu:hover {
+        transition: all .5s ease;
+        transform: scale(1.1);
+    }
+
+    .sp-menu.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .sp-menu.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .sp-menu.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+    .a-header.sp {
+        display: block;
+        // position: flex;
+        left: 0;
+        background-color: hsla(0, 0%, 10%, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .4em;
+        border-left-style: none;
+        height: 30vh;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        transition: all 3s ease-in-out;
+    }
+
+}

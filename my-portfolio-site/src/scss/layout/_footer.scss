@@ -1,0 +1,111 @@
+@use "../global" as vbls;
+
+.a-footer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: #272935;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    bottom: 0;
+    box-shadow: 0 0 .8rem rgb(168, 238, 154);
+    width: 100vw;
+    opacity: .9;
+
+    .quick-list {
+        margin-top: 1.2rem;
+
+        nav {
+            .c-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    margin: .1rem 2rem;
+
+                    a {
+                        font-size: 1.4rem;
+                        display: inline-block;
+                        text-align: center;
+                        width: 70px;
+                    }
+
+                    a:hover {
+                        transition: .4s ease;
+                        opacity: .5;
+                        letter-spacing: .1rem;
+                    }
+                }
+
+                span::before {
+                    content: "|";
+                    color: vbls.$spanColor;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .outer-footer {
+        text-align: center;
+        padding: .4rem;
+
+        small {
+            color: vbls.$smallColor;
+        }
+
+    }
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+
+    .a-footer {
+
+        .follow {
+            padding: .1rem;
+            margin: .2rem;
+
+            .item {
+                padding: .8rem;
+                margin: .6rem;
+
+                a {
+                    font-size: .8rem;
+                }
+            }
+
+        }
+
+        .quick-list {
+            nav {
+                .c-menu {
+
+                    li {
+                        margin: .1rem 1rem;
+
+                        a {
+                            font-size: 1.3rem;
+                            width: 6.6rem;
+                        }
+
+                    }
+
+                    span::before {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+
+        .outer-footer {
+            padding: .3em;
+        }
+    }
+
+}

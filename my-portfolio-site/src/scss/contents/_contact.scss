@@ -1,0 +1,122 @@
+@use "../global" as vbls;
+
+#contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 8rem;
+
+    form {
+        background-color: vbls.$formColor;
+        display: flex;
+        flex-direction: column;
+        padding: 2vw 4vw;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 10px;
+
+        h3 {
+            color: vbls.$h3Color;
+            font-weight: 800;
+            // background-color: aqua;
+            overflow: hidden;
+            margin-bottom: 1.2em;
+        }
+
+        input,
+        textarea {
+            border: 0;
+            margin: 1em 0;
+            padding: 2em;
+            outline: none;
+            background-color: vbls.$inputColor;
+            font-size: 1.6em;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .4em;
+            background-color: vbls.$formBtnColor;
+            color: vbls.$btnColor;
+            font-size: 2em;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            width: 140px;
+            margin: 20px auto 0;
+            overflow: hidden;
+            border-radius: 2em;
+        }
+
+        button:hover {
+            transition: all .5s ease;
+            transform: scale(1.1);
+            opacity: .9;
+        }
+
+    }
+
+}
+
+@media screen and (min-width:721px) and (max-width:1317px) {
+
+    #contact {
+
+        .title {
+            h2 {
+                font-size: 6rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) {
+    #contact {
+        margin-bottom: 8rem;
+        width: 80%;
+        margin: 0 auto;
+
+        .title {
+            h2 {
+                font-size: 4rem;
+                width: 55%;
+            }
+        }
+    }
+
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+    #contact {
+        margin-bottom: 8rem;
+
+        .title {
+            h2 {
+                font-size: 3rem;
+                width: 55%;
+            }
+        }
+
+        form {
+
+            input,
+            textarea {
+                font-size: 1.3rem;
+            }
+
+            button {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

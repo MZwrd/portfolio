@@ -1,0 +1,243 @@
+@use "../global" as vbls;
+
+#profile {
+    padding: 0% 10%;
+    display: flex;
+    flex-direction: column;
+
+    .profile_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .logo {
+
+            img {
+                margin-bottom: 7rem;
+                width: 400px;
+                height: 400px;
+                background-color: vbls.$logoColor;
+                border-radius: 50%;
+                padding: 1.2rem;
+                filter: sepia(100%);
+            }
+
+        }
+
+        .textBox {
+
+            .about-text,
+            .carrer-text {
+
+                h3 {
+                    font-size: 4.2rem;
+                    margin: 1rem 0;
+                    color: vbls.$h3Color;
+                }
+
+                .sentence {
+                    p {
+                        color: vbls.$pColor;
+                        font-size: 1.4rem;
+                        margin-top: 1.2rem;
+                        margin-bottom: 1.2rem;
+                    }
+
+                    .rightArrow {
+                        text-indent: 1.3rem;
+                        font-size: 2.2rem;
+                        margin-right: .7rem;
+                    }
+
+                    span {
+                        color: vbls.$spanColor;
+                        line-height: 70px;
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 
+    ====================
+          tablet 
+    ====================
+*/
+@media screen and (min-width:721px) and (max-width:1317px) {
+
+    #profile {
+        height: 100%;
+
+        .title {
+            height: 110px;
+
+            h2 {
+                font-size: 5.5rem;
+            }
+        }
+
+        .profile_container {
+            flex-direction: column;
+
+            .logo {
+                height: 100%;
+                margin-top: 5rem;
+
+            }
+            
+            .textBox {
+                
+                .about-text {
+                    
+                    .sentence {
+                        span {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+
+}
+
+@media screen and (min-width:481px) and (max-width: 720px) {
+    #profile {
+        height: 100%;
+
+        .title {
+            margin-top: 15rem;
+
+            h2 {
+                font-size: 4.5rem;
+                width: 50%;
+            }
+        }
+
+        .profile_container {
+            flex-direction: column;
+
+            .logo {
+
+                img {
+                    width: 340px;
+                    height: 340px;
+                }
+            }
+
+            .textBox {
+                .about-text {
+                    margin-bottom: 2rem;
+
+                    h3 {
+
+                        font-size: 3rem;
+                        margin: 1.3rem 0;
+
+                    }
+
+                    .sentence {
+
+                        span {
+                            font-size: 1.6rem;
+                            line-height: 60px;
+                        }
+                    }
+                }
+
+                .carrer-text {
+                    margin-top: 5rem;
+
+                    h3 {
+
+                        font-size: 3rem;
+                        margin-bottom: 1.3rem;
+
+                    }
+
+                    .sentence {
+                        line-height: 3rem;
+
+                        p {
+                            margin-top: 2rem;
+                            font-size: 1.5rem;
+                        }
+
+
+                        span {
+                            font-size: 1.4rem;
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+/* 
+   ==============================
+            smart phone
+   ==============================
+*/
+@media screen and (max-width: 480px) {
+    #profile {
+        height: 100%;
+
+        .title {
+
+            h2 {
+                font-size: 3.5rem;
+                width: 50%;
+
+            }
+
+        }
+
+        .profile_container {
+            flex-direction: column;
+
+            .logo {
+
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            .textBox {
+                .about-text {
+                    margin-bottom: 2rem;
+
+                    h3 {
+                        font-size: 2.2rem;
+                        margin: 1.3rem 0;
+                    }
+
+                    .sentence {
+             
+                        .rightArrow {
+                            font-size: 1.5rem;
+                        }
+                        span {
+                            line-height: 40px;
+                            font-size: 1.5rem;
+                            // letter-spacing: .2rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
